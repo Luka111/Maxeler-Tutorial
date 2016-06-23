@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maxCompilerManager version="2">
+<enginePart internalEngineSubproject="HelloWorld_EngineCode" isSrcBin="false" isUseDefaultSelected="false" outputLocation="/HelloWorld_EngineCode/bin" projectName="HelloWorld"/>
+<cpuPart internalCpuSubproject="HelloWorld_CPUCode"/>
+<watchedFiles/>
+</maxCompilerManager>

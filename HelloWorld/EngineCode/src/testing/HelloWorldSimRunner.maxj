@@ -1,0 +1,31 @@
+package testing;
+
+import com.maxeler.maxcompiler.v2.managers.standard.SimulationManager;
+
+import cpustream.CpuStreamKernel;
+
+public class HelloWorldSimRunner {
+	public static void main(String[] args) {
+
+		SimulationManager simMan = new SimulationManager("helloWorldSim");
+
+		CpuStreamKernel helloWorldKernel = new CpuStreamKernel(simMan.makeKernelParameters());
+
+		simMan.setKernel(helloWorldKernel);
+
+		simMan.setInputData("x", 1, 6, 3, 4, 5, 6, 7, 8);
+
+		simMan.setKernelCycles(8);
+
+		simMan.runTest();
+
+		simMan.dumpOutput();
+
+		double expectedOutput[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+		simMan.checkOutputData("z", expectedOutput);
+
+		simMan.logMsg("Test passed OK!");
+
+	}
+}

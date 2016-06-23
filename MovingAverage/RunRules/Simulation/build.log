@@ -1,0 +1,95 @@
+Sun 09:11: ########################################## 
+Sun 09:11: Compiling.
+Sun 09:11: ########################################## 
+
+Sun 09:11: MaxCompiler version: 2015.1.1 (simulation only).
+Sun 09:11: Build Simulation run rule for MovingAverage start time: Sun Jun 05 09:11:00 PDT 2016.
+Sun 09:11: Project location: /home/demo/workspace/MovingAverage.
+Sun 09:11: Detailed build log: /home/demo/workspace/MovingAverage/RunRules/Simulation/build.log.
+
+Sun 09:11: Compiling Engine Code.
+Sun 09:11: Building CpuStream.max file. 
+Sun 09:11: Setting environment variable:
+Sun 09:11: MAXCOMPILER_BUILD_DIR : /home/demo/workspace/MovingAverage/RunRules/Simulation/maxfiles
+Sun 09:11: MAX_BUILDPARAMS : DFEModel='VECTIS' target='DFE_SIM' maxFileName='CpuStream'  
+Sun 09:11: Building output:
+Sun 09:11: MaxCompiler version: 2015.1.1 (simulation only)
+Sun 09:11: Build "CpuStream" start time: Sun Jun 05 09:11:05 PDT 2016
+Sun 09:11: Main build process running as user demo on host localhost.localdomain
+Sun 09:11: Build location: /home/demo/Desktop/MaxCompiler-Builds/CpuStream_VECTIS_DFE_SIM
+Sun 09:11: Detailed build log available in "_build.log"
+Sun 09:11: Instantiating manager
+Sun 09:11: Instantiating kernel "CpuStreamKernel"
+Sun 09:11: Compiling manager (CPU I/O Only)
+Sun 09:11: 
+Sun 09:11: Compiling kernel "CpuStreamKernel"
+Sun 09:11: Running back-end simulation build (3 phases)
+Sun 09:11: (1/3) - Prepare MaxFile Data (GenerateMaxFileDataFile)
+Sun 09:11: (2/3) - Compile Simulation Modules (SimCompilePass)
+Sun 09:11: (3/3) - Generate MaxFile (AddSimObjectToMaxFilePass)
+Sun 09:11: MaxFile: /home/demo/Desktop/MaxCompiler-Builds/CpuStream_VECTIS_DFE_SIM/results/CpuStream.max (MD5Sum: f67602d40780f0f52b7b2961b1774018)
+Sun 09:11: Build completed: Sun Jun 05 09:11:22 PDT 2016 (took 16 secs)
+Sun 09:11: Executing command:
+Sun 09:11: cp /home/demo/workspace/MovingAverage/RunRules/Simulation/maxfiles/CpuStream.h /home/demo/workspace/MovingAverage/RunRules/Simulation/include/CpuStream.h 
+Sun 09:11: Command output:
+Sun 09:11: Building: CpuStream.max file finished.
+Sun 09:11: Engine build finished.
+Sun 09:11: Compiling CPU Code.
+Sun 09:11: Run CPU project make files updating
+Sun 09:11: Executing command:
+Sun 09:11: java -jar /opt/maxeler/maxcompiler/lib/MaxIDE/projectAdmin.jar -u /home/demo/workspace/MovingAverage Simulation 
+Sun 09:11: Command output:
+
+Sun 09:11: MaxCompiler Project Admin Tool Version 2015.1.10001
+Sun 09:11:  Copyright Maxeler Technologies 2010 - 2015. All rights reserved.
+
+Sun 09:11: Handler version 2
+Sun 09:11: Updating RunRule dependent Makefiles for RunRule 'Simulation'
+Sun 09:11: 	Updating: Simulation
+Sun 09:11: Found makefiles: 1
+Sun 09:11: 	Updated: Simulation
+Sun 09:11: Run CPU make.
+Sun 09:11: make RUNRULE=Simulation 
+Sun 09:11: Command output:
+Sun 09:11: make -f Makefile.rules build
+Sun 09:11: make[1]: Entering directory `/home/demo/workspace/MovingAverage/CPUCode'
+Sun 09:11: set -e; rm -f ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d ;                                                             \
+Sun 09:11: 	  cc -M -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxeler/maxcompiler/include/slic'  -Wno-error CpuStreamCpuCode.c > ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d.$$ ;                                 \
+Sun 09:11:       sed 's,\(CpuStreamCpuCode\)\.o[ :]*,../RunRules/Simulation/objects/c/\1.o ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d : ,g' < ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d.$$ > ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d; \
+Sun 09:11:       rm -f ../RunRules/Simulation/objects/c/CpuStreamCpuCode.d.$$
+Sun 09:11: make[1]: Leaving directory `/home/demo/workspace/MovingAverage/CPUCode'
+Sun 09:11: make[1]: Entering directory `/home/demo/workspace/MovingAverage/CPUCode'
+Sun 09:11: "/opt/maxeler/maxcompiler/bin/sliccompile" ../RunRules/Simulation/maxfiles/CpuStream.max ../RunRules/Simulation/objects/maxfiles/slic_CpuStream.o
+Sun 09:11: Processing maxfile for VECTIS_SIM from '../RunRules/Simulation/maxfiles/CpuStream.max'.
+Sun 09:11: gcc -std=gnu99 -Wall -Werror -fno-guess-branch-probability -frandom-seed=foo -Wno-unused-variable -Wno-unused-function -fPIC -I /opt/maxeler/maxcompiler/include/slic -DMAXFILE_INC="/home/demo/workspace/MovingAverage/CPUCode/../RunRules/Simulation/maxfiles/CpuStream.max" -DSLIC_NO_DESTRUCTORS -c /opt/maxeler/maxcompiler/src/slicinterface/MaxFileInit.c -o slic_CpuStream.o 
+Sun 09:11: Copying .max file C object into '/home/demo/workspace/MovingAverage/CPUCode/../RunRules/Simulation/objects/maxfiles'
+Sun 09:11: cc -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxeler/maxcompiler/include/slic'  -c CpuStreamCpuCode.c -o ../RunRules/Simulation/objects/c/CpuStreamCpuCode.o
+Sun 09:11: cc -std=gnu99 -g -O3 -Wall -Wextra -I../RunRules/Simulation/include  -I '/opt/maxeler/maxcompiler/include/slic'  -o ../RunRules/Simulation/binaries/CpuStream ../RunRules/Simulation/objects/maxfiles/slic_CpuStream.o ../RunRules/Simulation/objects/c/CpuStreamCpuCode.o -g -O3  -L '/opt/maxeler/maxcompiler/lib' -lslic -L '/opt/maxeler/maxcompiler/lib/maxeleros-sim/lib' -lmaxeleros -lpthread -lm -lrt 
+Sun 09:11: make[1]: Leaving directory `/home/demo/workspace/MovingAverage/CPUCode'
+Sun 09:11: Build completed: Sun Jun 05 09:11:25 PDT 2016
+
+
+Sun 09:11: ########################################## 
+Sun 09:11: Running
+Sun 09:11: ########################################## 
+Sun 09:11: Executing command:
+Sun 09:11: '/home/demo/workspace/MovingAverage/RunRules/Simulation/binaries/CpuStream' 
+Sun 09:11: Command output:
+Sun 09:11: dataIn[0] = 1.000000
+Sun 09:11: dataIn[1] = 3.000000
+Sun 09:11: dataIn[2] = 5.000000
+Sun 09:11: dataIn[3] = 13.000000
+Sun 09:11: dataIn[4] = 0.000000
+Sun 09:11: dataIn[5] = 2.000000
+Sun 09:11: dataIn[6] = 4.000000
+Sun 09:11: dataIn[7] = 6.000000
+Sun 09:11: Running DFE
+Sun 09:11: dataOut[0] = 2.000000
+Sun 09:11: dataOut[1] = 3.000000
+Sun 09:11: dataOut[2] = 7.000000
+Sun 09:11: dataOut[3] = 6.000000
+Sun 09:11: dataOut[4] = 5.000000
+Sun 09:11: dataOut[5] = 2.000000
+Sun 09:11: dataOut[6] = 4.000000
+Sun 09:11: dataOut[7] = 5.000000
+Sun 09:11: Process terminated with exit code 0.
